@@ -1,6 +1,6 @@
 # present-register
 create new project with lower dotnet 7 and "individual user identification"
-  > dotnet new mvc --framework net7.0 --auth Individual
+  > dotnet new mvc --framework net7.0 --auth Individual <
 <delete existing migration files 0000..00_Create...
 add nuget package Pomelo.EntityFrameworkCore.MySql
 remove nuget package sqlite
