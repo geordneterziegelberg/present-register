@@ -19,5 +19,19 @@ add connection strings to appsettings.json
    `"ConnectionStrings": {
     "IdentityConnection": "server=localhost;user=<user>;password=<password>;database=Identity",
     "RegisterConnection": "server=localhost;user=<user>;password=<password>;database=Register"}`
+create Model Register.cs
+   `namespace present_register;
+    public class Register
+    {
+    public int ID {get;set;}
+    public string Title {get;set;} = "";
+    }`
 create appDbContext.cs file in folder Data
-create Model
+   `using Microsoft.EntityFrameworkCore;
+    namespace present_register.Data;
+    public class AppDbContext : DbContext
+    {
+    public DbSet<Register> Register { get; set; }
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options) {}}`
+
